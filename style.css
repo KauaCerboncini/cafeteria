@@ -1,0 +1,262 @@
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    font-size: 10px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+section{
+    padding:3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: #7b4a2f;
+
+
+}
+
+.header section{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        /* ocupa 100% da barra */
+        padding: 0 2rem;
+        /* removemos padding-top e bottom */
+
+}
+.header .logo{
+height: 130px;
+    /* aumentamos um pouco a logo */
+    width: auto;
+    object-fit: contain;
+    }
+
+.nav-menu a {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+
+}
+
+.nav-menu a:hover {
+    color: rgb(51, 26, 16);
+    border-bottom: rgb(51, 26, 16);
+    padding-bottom: 0.5rem;
+    font-size: 2.1rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+
+
+.home-container {
+    background: url("./fundocafe.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container section{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    /* camada escura */
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8);
+    /* sombra interna */
+    z-index: 1;
+}
+
+
+.content{
+    max-width: 60rem;
+    position: relative;
+        /* necessário para funcionar com z-index */
+        z-index: 2;
+        /* joga o conteúdo acima da camada escura */
+}
+
+
+.content h3 {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span{
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.sobre .row{
+    display: flex;
+    align-items: center;
+    background-color:var(--black);
+    gap: 1.5rem;
+
+}
+
+.sobre .row .content{
+    padding: 2rem;
+
+}
+.sobre .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.sobre .row .content p{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+}
+
+.content-image img {
+    width: 500px;
+    height: auto;
+}
+
+.box img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cardapio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.6rem;
+}
+
+.cardapio .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+}
+
+
+.cardapio .box-container .box img {
+    height: 10rem;
+}
+
+.cardapio .box-container .box h3 {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.cardapio .box-container .box .preco {
+    color: white;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.cardapio .box-container .box:hover{
+    background-color: rgb(44, 27, 15);
+}
+
+.cardapio .box-container .box:hover>* {
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    background-color: #573320;;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #2b1206;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+height: 130px;
+    /* aumentamos um pouco a logo */
+    width: auto;
+}
